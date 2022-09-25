@@ -1,0 +1,20 @@
+<div class="body">
+    <div class="container">
+        <div class="form">
+            <form [formGroup]="form">
+                <div class="heading">
+                    Answer questions to check your IQ 
+                </div>
+                <div class="formGroup">
+                <label for="question">What is the output of {{question}} ?</label>
+                <input type="text" placeholder="enter your answer" formControlName="answer" (input)="input($event,question)">
+                <div class="message" *ngIf="messageShow" [ngStyle]="{color: correct ? 'green' : 'red'}">{{message}}</div>
+            </div>
+            <div class="buttonGroup">
+                <button class="btn"  (click)="submit(form)">Next</button>
+            </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
