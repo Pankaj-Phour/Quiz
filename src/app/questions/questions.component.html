@@ -7,11 +7,17 @@
                 </div>
                 <div class="formGroup">
                 <label for="question">What is the output of {{question}} ?</label>
-                <input type="text" placeholder="enter your answer" formControlName="answer" (input)="input($event,question)">
+                <input type="text" placeholder="enter your answer" formControlName="answer" (input)="input($event,question)" (keydown)="KeyDown($event)">
                 <div class="message" *ngIf="messageShow" [ngStyle]="{color: correct ? 'green' : 'red'}">{{message}}</div>
             </div>
-            <div class="buttonGroup">
-                <button class="btn"  (click)="submit(form)">Next</button>
+            <div class="bottom">
+
+                <div class="buttonGroup">
+                    <button class="btn"  (click)="skip()">Skip</button>
+                </div>
+                <div class="buttonGroup">
+                    <button class="btn"  (click)="submit()">Submit</button>
+                </div>
             </div>
             </form>
             
