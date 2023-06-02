@@ -28,4 +28,20 @@
     height: 70px;
     position: fixed;
     top: 0%;
+    
+}
+.heading, .numbers{
+    font-family: 'roboto';
+}
+.profile{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+::ng-deep .mat-menu-panel{
+    min-width: 200px !important;
+}
+.matMenu button{
+    font-family: 'roboto';
 }
