@@ -1,12 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class APIService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
 
 
@@ -21,6 +23,19 @@ export class APIService {
 
   questionUpdate(index:any){
     this.questionCount.emit(index)
+  }
+
+  signUp(endpoint:any,params:any){
+    return this.http.post(environment.URL + endpoint,params)
+  }
+
+  signIn(endpoint:any,params:any){
+   return  this.http.post(environment.URL + endpoint,params)
+  }
+
+
+  otpChecker(endpoint:any,params:any){
+    return this.http.post(environment.URL + endpoint,params)
   }
 
 }

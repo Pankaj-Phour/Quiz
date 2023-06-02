@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "vars";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
     padding: 0px;
@@ -8,4 +9,454 @@
 }
 body{
     overflow: hidden;
+}
+
+.titleBlue {
+    color: $blueColor;
+    font-size: 14px;
+    font-family: $roboto;
+    span {
+        color: $blueColor;
+        font-size: 14px;
+        font-family: $roboto;
+    }
+    div {
+        color: $blueColor;
+        font-family: $roboto;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.mat-button {
+    &.transparent-button {
+        border-radius: 50px !important;
+        min-width: 92px;
+        min-height: 38px;
+        &:enabled {
+            color: transparent !important;
+            background-color: transparent !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: unset !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: $greyColor;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+}
+
+
+
+
+
+
+.mat-raised-button {
+    &.btn-lg {
+        width: 200px;
+    }
+    &.monet-button {
+        border-radius: 50px !important;
+        min-width: 92px;
+        min-height: 38px;
+        
+        &:enabled {
+            color: #ffffff !important;
+            
+            background-image: $buttonGradient !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                    display: flex !important;
+            justify-content: space-around !important;
+            align-items: center !important;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.monet-new-button {
+        min-width: 125px;
+        min-height: 38px;
+        border-radius: 0 !important;
+        &:enabled {
+            color: #ffffff !important;
+            background: $blueColor;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.white-new-button {
+        min-width: 125px;
+        min-height: 38px;
+        border-radius: 0 !important;
+        &:enabled {
+            color: $blueColor !important;
+            background: #FFFFFF;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #5c95e4;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.monet-tutorial-button {
+        min-width: 80px;
+        min-height: 25px;
+        border-radius: 20px;
+        background-color: #2680EB !important;
+        border: 0px solid #2680EB;
+        &:enabled {
+            color: #ffffff !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                    font-size: 12px;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.white-button {
+        min-width: 125px;
+        min-height: 38px;
+        border-radius: 24px;
+        &:enabled {
+            color: $greyColor !important;
+            background-color: #ffffff !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: $greyColor;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.logout-button {
+        border-radius: 50px !important;
+        min-width: 125px;
+        min-height: 38px;
+        box-shadow: none;
+        color: $success !important;
+        padding: 0px 8px;
+        &:enabled {
+            color: $success!important;
+            /* background: linear-gradient(to right, #1838D6, #5c95e4)  !important;*/
+            cursor: pointer;
+            &:hover {
+                box-shadow: none!important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: $success;
+                    font-size: 14px;
+                }
+            }
+        }
+        line-height: 32px !important;
+    }
+    &.cancel-button {
+        min-width: 125px;
+        min-height: 38px;
+        box-shadow: 0 0px 0px 0px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .14), 0 0px 6px 0 rgba(0, 0, 0, .12);
+        border-radius: 24px;
+        &:enabled {
+            color: $greyColor !important;
+            background-color: #ffffff !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: $greyColor;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.summary-button {
+        min-width: 100px;
+        min-height: 25px;
+        box-shadow: none;
+        border: 1px solid $blueColor;
+        &:enabled {
+            color: white !important;
+            background-color: #ffffff !important;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: none !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: white;
+                }
+            }
+        }
+        line-height: 30px !important;
+    }
+    &.edit-button {
+        min-width: 100px;
+        min-height: 25px;
+        box-shadow: none;
+        border: 1px solid #777777;
+        &:enabled {
+            color: #FFFFFF !important;
+            background-color: #777777 !important;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: none !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #FFFFFF;
+                }
+            }
+        }
+        line-height: 30px !important;
+    }
+    &.load-button {
+        min-width: 125px;
+        min-height: 38px;
+        box-shadow: 0 0px 0px 0px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .14), 0 0px 6px 0 rgba(0, 0, 0, .12);
+        &:enabled {
+            color: #ffffff !important;
+            background-color: $success !important;
+            border-radius: 24px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.detail-button {
+        min-width: 90px;
+        min-height: 30px;
+        box-shadow: none;
+        border: 1px solid $blueColor;
+        &:enabled {
+            color: $blueColor !important;
+            background-color: transparent!important;
+            border-radius: 24px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: none !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: $blueColor;
+                }
+            }
+        }
+        line-height: 28px !important;
+    }
+    &.Campaign-button {
+        min-width: 125px;
+        min-height: 38px;
+        box-shadow: none;
+        &:enabled {
+            color: #ffffff !important;
+            background-color: $blueColor !important;
+            border-radius: 24px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.Asset-button {
+        min-width: 125px;
+        min-height: 38px;
+        box-shadow: none;
+        border: 1px solid $blueColor;
+        &:enabled {
+            color: $blueColor !important;
+            background-color: #ffffff !important;
+            border-radius: 24px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: $blueColor;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.danger-button {
+        min-width: 125px;
+        min-height: 38px;
+        &:enabled {
+            color: #ffffff !important;
+            background-color: #b90808 !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.green-button1 {
+        min-width: 80px;
+        min-height: 32px;
+        border-radius: 24px;
+        &:enabled {
+            color: #fff !important;
+            background-color: $success !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                }
+            }
+        }
+        line-height: 32px !important;
+    }
+    &.green-button {
+        min-width: 125px;
+        min-height: 38px;
+        border-radius: 24px;
+        &:enabled {
+            color: #fff !important;
+            background-color: $success !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: $buttonBoxShadow !important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #ffffff;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.Edit-button {
+        min-width: 70px;
+        min-height: 30px;
+        box-shadow: none;
+        color: #878787 !important;
+        padding: 0px 8px;
+        &:enabled {
+            color: #878787 !important;
+            background-color: #87878740 !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: none!important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #878787;
+                    font-size: 12px;
+                }
+            }
+        }
+        line-height: 35px !important;
+    }
+    &.Total-Due {
+        min-width: 90px;
+        min-height: 16px;
+        box-shadow: none;
+        color: #FFFFFF !important;
+        padding: 0px 8px;
+        border-radius: 0px;
+        &:enabled {
+            color: #FFFFFF !important;
+            background-color: $blueColor !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: none!important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #FFFFFF;
+                    font-size: 14px;
+                }
+            }
+        }
+        line-height: 32px !important;
+    }
+    &.profile-button {
+        border-radius: 50px !important;
+        min-width: 125px;
+        min-height: 38px;
+        box-shadow: none;
+        color: #FFFFFF !important;
+        padding: 0px 8px;
+        &:enabled {
+            color: #FFFFFF !important;
+            background: linear-gradient(to right, #1838D6, #5c95e4) !important;
+            cursor: pointer;
+            &:hover {
+                box-shadow: none!important;
+            }
+            span {
+                &.mat-button-wrapper {
+                    color: #FFFFFF;
+                    font-size: 14px;
+                }
+            }
+        }
+        line-height: 32px !important;
+    }
 }

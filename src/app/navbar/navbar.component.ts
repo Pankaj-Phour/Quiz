@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from '../api.service';
+import { AlertDialogComponent } from '../alert-dialog/alert-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +12,10 @@ import { APIService } from '../api.service';
 export class NavbarComponent implements OnInit {
 score:any = 0;
 index:any = 1;
-  constructor(private api:APIService) { }
+  constructor(private api:APIService,
+    private dialog:MatDialog,
+    private router:Router
+    ) { }
 
   ngOnInit(): void {
     this.api.questionCount.subscribe((index:any)=>{
@@ -19,4 +25,28 @@ index:any = 1;
     })
   }
 
+
+  logout(){
+    const data = {
+      head: "Confirmation",
+      msg: "Do you want to logout?",
+      yes: "Logout",
+      no: "Cancel",
+    };
+    const a = this.dialog.open(AlertDialogComponent,{
+      disableClose: true,
+      hasBackdrop: true,
+      data: data,
+      width: "350px",
+      height: "250px",
+      panelClass: "deleteCampaigns",
+      
+    })
+    a.afterClosed().subscribe((res:any)=>{
+      console.log(res);
+      if(res=='yes'){
+        this.router.navigate(['/auth'])
+      }
+    })
+  }
 }

@@ -1,0 +1,38 @@
+*{
+  font-family: 'roboto';
+}
+.menu-item {
+    height: 40px;
+    width: 270px !important;
+    border-bottom: 1px solid #dedede;
+  }/*
+  ::ng-deep.mat-menu-content {
+    padding: 0 !important;
+    width: 270px !important;
+  }*/
+  .custom-default-btn {
+    button:enabled span  {
+      color: #878787 !important;
+    }
+    background-image: unset !important;
+    background-color: #ffffff !important;
+  }
+  
+  .buttonGroup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .parent{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+  }
+  .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 15px;
+  }
