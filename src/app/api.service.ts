@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -12,4 +12,15 @@ export class APIService {
 
   public score = new BehaviorSubject<any>('');
   score$ = this.score.asObservable();
+
+
+  public index = new BehaviorSubject<any>('');
+  index$ = this.score.asObservable();
+
+  @Output() questionCount = new EventEmitter();
+
+  questionUpdate(index:any){
+    this.questionCount.emit(index)
+  }
+
 }

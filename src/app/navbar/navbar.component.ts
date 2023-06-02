@@ -8,13 +8,13 @@ import { APIService } from '../api.service';
 })
 export class NavbarComponent implements OnInit {
 score:any = 0;
+index:any = 1;
   constructor(private api:APIService) { }
 
   ngOnInit(): void {
-    this.api.score$.subscribe((score:any)=>{
-      console.log(typeof score,score);
-      if(typeof score === 'number') {
-        this.score = score;
+    this.api.questionCount.subscribe((index:any)=>{
+      if(typeof index === 'number') {
+        this.index = index;
       }
     })
   }

@@ -11,16 +11,17 @@ export class QuestionsComponent implements OnInit {
 
   form:FormGroup;
   score:any = 0;
+  index:any = 0;
   correct:boolean = false;
   messageShow:boolean = false;
-  types = ['X','+','-','-','+','+','X','-','X','+','-'];
+  types = ['X','+','-','X','+','-','X','+','-','X','+'];
   message:any = "Please answer the question to proceed";
   constructor(private api:APIService) { }
-question:any = "What is 7 X 9 ?"
+question:any;
   ngOnInit(): void {
     console.log(this.form);
     this.validation();
-    this.questionGenerator()
+    this.questionGenerator();
   }
 
   validation(){
@@ -34,13 +35,14 @@ question:any = "What is 7 X 9 ?"
     if(this.correct===true){
       setTimeout(() => {
         this.messageShow = false;
-      }, 2500);
-      // setTimeout(() => {
-      //   this.questionGenerator();
-      // }, 1000);
+      }, 2000);
+      setTimeout(() => {
+        this.questionGenerator();
+      }, 1000);
       this.score += 1;
-      this.api.score.next(this.score)
+      this.api.score.next(this.score);
     }
+    
   }
 
   input(e:any,question:any){
@@ -74,27 +76,34 @@ question:any = "What is 7 X 9 ?"
   }
 
   KeyDown(e:any){
+    
     if(e.keyCode === 13){
-      this.submit()
+      this.submit();
     }
     
   }
 
   questionGenerator(){
+    this.index = this.index + 1;
+    console.log(this.index);
+    
+    this.api.questionUpdate(this.index)
     this.form.reset();
     let a = Math.round(Math.random()*100);
     let b = Math.round(Math.random()*100);
-    console.log(a,b);
+    // console.log(a,b);
     let index = Math.ceil(Math.random()*10);
-    console.log(index);
+    // console.log(index);
     let type = this.types[index-1]
-    console.log(type);
+    // console.log(type);
     let question = `${a} ${type} ${b}`;
-    console.log(question);
+    // console.log(question);
     this.question = question;
   }
 
   skip(){
+    console.log("HEllo from skip");
+    
     this.questionGenerator();
   }
 
