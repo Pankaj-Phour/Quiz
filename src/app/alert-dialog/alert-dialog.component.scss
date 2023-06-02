@@ -35,4 +35,18 @@
     flex-direction: column;
     justify-content: space-around;
     row-gap: 15px;
+    color: white;
+  }
+
+  ::ng-deep .mat-dialog-container{
+    background-color: black !important;
+    box-shadow: rgba(212,136,141, 0.25) 0px 50px 100px -20px, rgba(212,136,141, 0.3) 0px 30px 60px -30px, rgba(212,136,141, 0.35) 0px -2px 6px 0px inset;
+
+  }
+
+  .monet-button{
+    background-color: #d4888d;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
   }

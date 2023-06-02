@@ -19,7 +19,7 @@ export class QuestionsComponent implements OnInit {
   constructor(private api:APIService) { }
 question:any;
   ngOnInit(): void {
-    console.log(this.form);
+    // console.log(this.form);
     this.validation();
     this.questionGenerator();
   }
@@ -46,7 +46,7 @@ question:any;
   }
 
   input(e:any,question:any){
-    console.log(question);
+    // console.log(question);
     let data = question.split(' ');
     let number1 = +(data[0])
     let number2 = +(data[2])
@@ -85,7 +85,7 @@ question:any;
 
   questionGenerator(){
     this.index = this.index + 1;
-    console.log(this.index);
+    // console.log(this.index);
     
     this.api.questionUpdate(this.index)
     this.form.reset();
@@ -102,7 +102,7 @@ question:any;
   }
 
   skip(){
-    console.log("HEllo from skip");
+    // console.log("HEllo from skip");
     
     this.questionGenerator();
   }
