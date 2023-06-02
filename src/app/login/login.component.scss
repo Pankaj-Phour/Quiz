@@ -1,0 +1,324 @@
+.body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(72 71 71);
+    position: relative;
+    overflow: hidden;
+}
+.parent{
+    max-width: 1000px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+}
+.box{
+    position: absolute;
+    display: flex;
+    max-width: 1000px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(212,136,141, 0.25) 0px 50px 100px -20px, rgba(212,136,141, 0.3) 0px 30px 60px -30px, rgba(212,136,141, 0.35) 0px -2px 6px 0px inset;
+}
+.sign-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+}
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+}
+.left{
+    display: flex;
+    max-width: 100%;
+    width: 50%;
+    height: 100%;
+}
+.left img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.right{
+    display: flex;
+    max-width: 100%;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-block: 5%;
+    row-gap: 20px;
+    max-width: 100%;
+    width: 100%;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 5px;
+}
+.heading{
+    font-size: 32px;
+    color: white;
+}
+.text{
+    font-size: 13px;
+    color: gray;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 15px;
+}
+input{
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    max-width: 100%;
+    width: 95%;
+    background-color: #424242;
+    color: white;
+}
+.formGroup{
+    position: relative;
+}
+.formGroup::ng-deep{
+    // .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background{
+        .mat-checkbox-frame{
+        background-color: #424242 !important;
+        border-color: transparent !important;
+    }
+}
+.formGroup::ng-deep{
+    // .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background{
+        .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+        background-color: #d4888d !important;
+        border-color: #d4888d !important;
+    }
+}
+.formGroup::ng-deep{
+    .mat-checkbox-layout .mat-checkbox-label{
+        line-height: 20px;
+        white-space: break-spaces;
+        width: 300px;
+    }
+}
+.bottomButton{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.submit-btn{
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    padding: 8px;
+    background-color: #d4888d;
+   max-width: 100%;
+   width: 100%;
+}
+.disabled-btn{
+    border-radius: 10px;
+    font-size: 16px;
+    cursor:not-allowed;
+    color: white;
+    padding: 8px;
+    background-color: #424242;
+   max-width: 100%;
+   width: 100%;
+}
+.top{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+// CSS for the slide animation 
+.parent {
+    position: absolute;
+    left: 150%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    0% { right: -50%; }
+}
+@keyframes slide {
+    0% { right: -50%; }
+}
+@-webkit-keyframes slide {
+    100% { left: 50%; }
+}
+@keyframes slide {
+    100% { left: 50%; }
+}
+
+// CSS for the additional signup part 
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+.bottom .first, .second{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.second img{
+    cursor: pointer;
+}
+
+
+// CSS  for the error messages for the input fields 
+.error{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 90%;
+    top: 50%;
+    color: rgb(184, 61, 61);
+    font-size: 11px;
+}
+.borderError{
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+// CSS for the flip animation of the signup and signin forms 
+
+  
+  
+  .box {
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+  }
+  
+  .box.is-flipped {
+    transform: rotateX(180deg);
+  }
+  
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  .sign-in {
+    transform: rotateX(180deg);
+  }
+  .prefix{
+    color: white;
+    font-size: 13px;
+  }
+
+//   CSS for the spinner on submit button 
+.bottomButton{
+    ::ng-deep .mat-progress-spinner[mode=indeterminate] circle{
+        stroke:#fff;
+    }
+}
+.spinner{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 70%;
+    z-index: 1;
+}
+
+
+// CSS for the google login button 
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669F2;
+
+.google-btn {
+  width: 184px;
+  height: 42px;
+  background-color: $google-blue;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: $white;
+  }
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    float: right;
+    margin: 11px 11px 0 0;
+    color: $white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: "Roboto";
+  }
+  &:hover {
+    box-shadow: 0 0 6px $google-blue;
+  }
+  &:active {
+    background: $button-active-blue;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);

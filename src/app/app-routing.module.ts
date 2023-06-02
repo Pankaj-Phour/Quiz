@@ -5,12 +5,17 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path:'', 
+    path:'dashboard', 
     component: QuestionsComponent
   },
   {
     path:'auth', 
     component: LoginComponent
+  },
+  {
+    path : '**',
+    redirectTo : 'dashboard',
+    pathMatch : 'full'
   }
 
 ];

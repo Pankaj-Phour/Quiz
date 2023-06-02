@@ -14,6 +14,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatMenuModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatCheckboxModule,
+    NgOtpInputModule
 
   ],
   providers: [],

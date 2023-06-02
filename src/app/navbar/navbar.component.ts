@@ -45,6 +45,7 @@ index:any = 1;
     a.afterClosed().subscribe((res:any)=>{
       console.log(res);
       if(res=='yes'){
+        localStorage.clear();
         this.router.navigate(['/auth'])
       }
     })
