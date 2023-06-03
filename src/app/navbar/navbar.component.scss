@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #d4888d;
 }
 .container{
     display: flex;
@@ -19,13 +20,39 @@
     height: 100%;
 }
 .navbar{
+    background-color: black;
     max-width: 100%;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    height: 70px;
+    align-items: flex-start;
+    padding-top: 20px;
+    // box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    box-shadow: rgba(212,136,141, 0.25) 0px 50px 100px -20px, rgba(212,136,141, 0.3) 0px 30px 60px -30px, rgba(212,136,141, 0.35) 0px -2px 6px 0px inset;
+
+    height: 120px;
     position: fixed;
     top: 0%;
+    
+}
+.heading, .numbers{
+    font-family: 'roboto';
+}
+.profile{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+::ng-deep .mat-menu-panel{
+    min-width: 200px !important;
+    background-color: black !important;
+    box-shadow: rgba(212,136,141, 0.25) 0px 50px 100px -20px, rgba(212,136,141, 0.3) 0px 30px 60px -30px, rgba(212,136,141, 0.35) 0px -2px 6px 0px inset;
+
+}
+::ng-deep .mat-menu-item{
+    color: #d4888d !important;
+}
+.matMenu button{
+    font-family: 'roboto';
 }

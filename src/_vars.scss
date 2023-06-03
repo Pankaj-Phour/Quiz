@@ -1,0 +1,17 @@
+$blueColor: rgb(30, 115, 197);
+$roboto: 'roboto';
+$buttonGradient: linear-gradient(135deg, #79236B, #1C5BA2);
+$buttonBoxShadow: 0 8px 10px rgba(0, 0, 0, 0.16);
+$greyColor: #423f3f;
+$success: rgb(20, 158, 75) ;
+
+
+
+[titleBlue24] {
+    color: #d4888d !important;
+    font-size: 1.1rem !important;
+    font-family: $roboto;
+    span {
+      color: #d4888d;
+    }
+  }

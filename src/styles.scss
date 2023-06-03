@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "vars";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
     padding: 0px;
     margin: 0px;
@@ -6,3 +10,45 @@
 body{
     overflow: hidden;
 }
+
+.titleBlue {
+    color: $blueColor;
+    font-size: 14px;
+    font-family: $roboto;
+    span {
+        color: $blueColor;
+        font-size: 14px;
+        font-family: $roboto;
+    }
+    div {
+        color: #d4888d;
+        font-family: $roboto;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.transparent-button {
+       color: #d4888d;
+       background-color: transparent;
+    }
+
+.transparent-button:hover{
+    background-color: #d4888d;
+    border-radius: 20px;
+    color: black;
+}
+
+
+
+
+
+
+

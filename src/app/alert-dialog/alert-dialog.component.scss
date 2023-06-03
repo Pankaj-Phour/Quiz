@@ -1,0 +1,52 @@
+*{
+  font-family: 'roboto';
+}
+.menu-item {
+    height: 40px;
+    width: 270px !important;
+    border-bottom: 1px solid #dedede;
+  }/*
+  ::ng-deep.mat-menu-content {
+    padding: 0 !important;
+    width: 270px !important;
+  }*/
+  .custom-default-btn {
+    button:enabled span  {
+      color: #878787 !important;
+    }
+    background-image: unset !important;
+    background-color: #ffffff !important;
+  }
+  
+  .buttonGroup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .parent{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+  }
+  .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 15px;
+    color: white;
+  }
+
+  ::ng-deep .mat-dialog-container{
+    background-color: black !important;
+    box-shadow: rgba(212,136,141, 0.25) 0px 50px 100px -20px, rgba(212,136,141, 0.3) 0px 30px 60px -30px, rgba(212,136,141, 0.35) 0px -2px 6px 0px inset;
+
+  }
+
+  .monet-button{
+    background-color: #d4888d;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+  }

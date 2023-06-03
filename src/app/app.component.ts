@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quiz';
-  
+  login:boolean = false;
+  ngOnInit(){
+    console.log("Hello from app component");
+    if(localStorage.getItem('logged_in')){
+      this.login = true;
+    }
+  }
 }

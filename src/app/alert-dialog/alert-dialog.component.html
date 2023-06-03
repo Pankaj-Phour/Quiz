@@ -1,0 +1,19 @@
+
+
+<div class="parent">
+  <div class="top">
+      <span titleBlue24 >{{data.head}}</span>
+      <div fxFlex="100%" fxLayout="row">
+        <span [ngStyle]="{'line-height' : '25px'}">{{data.msg}}</span>
+      </div>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="end end">
+      <div class="buttonGroup">
+        <button mat-button [ngClass]="['transparent-button']" (click)="dialogRef.close('no')">{{data.no}}</button>
+        <button mat-raised-button [ngClass]="['monet-button']" (click)="dialogRef.close('yes')">{{data.yes}}</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #container></ng-template>
+  
