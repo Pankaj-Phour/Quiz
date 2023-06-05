@@ -126,7 +126,7 @@
                             </div>
                             <div class="inputs">
                                 <div class="formGroup" style="display: flex;justify-content: center;">
-                                    <ng-otp-input  formnControlName="otp"  [config]="{length:4}" (keydown)="keyValue($event)" (onInputChange)="onOtpChange($event)"></ng-otp-input>
+                                    <ng-otp-input  formControlName="otp"  [config]="{length:4}" (keydown)="keyValue($event)" (onInputChange)="onOtpChange($event)"></ng-otp-input>
                                     <span class="error" *ngIf="signinForm.get('contact').hasError('required') && signinForm.get('contact').touched">*required</span>
                                      <span class="error" *ngIf="!signinForm.get('contact').hasError('required') && signinForm.get('contact').touched && contactError">*Invalid</span>
                                 </div>

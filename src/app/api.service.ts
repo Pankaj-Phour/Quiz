@@ -10,6 +10,15 @@ export class APIService {
 
   constructor(private http:HttpClient) { }
 
+  
+  private _notify = new BehaviorSubject<any>({status: 'success', message: 'message', start: false, code: 200});
+  notify$ = this._notify.asObservable();
+
+  obNotify(data: any): void {
+    // console.log(data);
+    
+    this._notify.next(data);
+  }
 
 
   public score = new BehaviorSubject<any>('');
