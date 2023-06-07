@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { NotificationComponent } from './notification/notification.component';
+import { NotifyComponent } from './notify/notify.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NgOtpInputModule } from 'ng-otp-input';
     QuestionsComponent,
     ResultComponent,
     LoginComponent,
-    AlertDialogComponent
+    AlertDialogComponent,
+    NotificationComponent,
+    NotifyComponent
   ],
   imports: [
     BrowserModule,
